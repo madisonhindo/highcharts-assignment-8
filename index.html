@@ -34,7 +34,7 @@
     },
 
     subtitle: {
-      text: 'Source: http://data.un.org/'
+      text: 'Source: <a href="http://data.un.org/DocumentData.aspx?id=378">UN Human Development Index</a>'
     },
 
     yAxis: {
@@ -95,7 +95,7 @@
   <script>
   Highcharts.chart('container2', {
     chart: {
-      type: 'bar'
+      type: 'column'
     },
     title: {
       text: 'Human Development Index by Gender in Top Five Most Populuous Countries, 2014'
@@ -105,47 +105,34 @@
     },
     xAxis: {
       categories: ['United States', 'Brazil', 'China', 'Indonesia', 'India'],
-      title: {
-        text: null
-      }
+      crosshair: true
     },
     yAxis: {
       min: 0,
+      tickInterval: 0.2,
       title: {
-        text: 'Human Development Index (HDI)',
-        align: 'high'
-      },
-      labels: {
-        overflow: 'justify'
+        text: 'Human Development Index (HDI)'
       }
+    },
+    tooltip: {
+      footerFormat: '</table>',
+      shared: true,
+      useHTML: true,
     },
     plotOptions: {
-      bar: {
-        dataLabels: {
-          enabled: false
-        }
+      column: {
+        pointPadding: 0.2,
+        borderWidth: 0
       }
-    },
-    legend: {
-      layout: 'vertical',
-      align: 'right',
-      verticalAlign: 'top',
-      x: 0,
-      y: 200,
-      floating: true,
-      borderWidth: 1,
-      backgroundColor: ((Highcharts.theme && Highcharts.theme.legendBackgroundColor) || '#FFFFFF'),
-      shadow: true
-    },
-    credits: {
-      enabled: false
     },
     series: [{
       name: 'Male',
       data: [0.916, 0.754, 0.747, 0.706, 0.660]
+
     }, {
       name: 'Female',
       data: [0.911, 0.752, 0.705, 0.655, 0.525]
+
     }]
   });
   </script>
