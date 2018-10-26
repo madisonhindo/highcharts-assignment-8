@@ -1,10 +1,10 @@
 
 html {
-    font-size: 100%; /* keep */
-    box-sizing: border-box; /* keep */
+    font-size: 100%;
+    box-sizing: border-box;
 }
 * {
-    box-sizing: inherit; /* keep */
+    box-sizing: inherit;
 }
 
 body {
@@ -56,4 +56,4 @@ h1 {
   article {
     margin: 1rem;
   }
-}
+} 
