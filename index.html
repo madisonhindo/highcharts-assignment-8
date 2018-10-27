@@ -12,129 +12,129 @@
 </head>
 <body>
   <article>
-  <h1>Human Development Index Measures in the Top Five Most Populous Countries</h1>
-  <div id="byline"><p>By Madison Hindo</p></div>
+    <h1>Human Development Index Measures in the Top Five Most Populous Countries</h1>
+    <div id="byline"><p>By Madison Hindo</p></div>
 
-  <div id="text">
-    <p>These charts are both depict measures of the Human Development Index in the five most populous countries in the world. The Human Development Index is a measurement that encompasses education, health and standards of living. The first chart illustrates changes in HDI from 2010 to 2014, and it shows that the HDI level has increased for each country for the time period shown. The second chart splits up the HDI by gender and shows gaps in the measure between males and females. The largest gender gap can be seen in India, and the smallest is in Brazil.
-</p>
-  </div>
+    <div id="text">
+      <p>These charts depict measures of the Human Development Index in the five most populous countries in the world. The Human Development Index is a measurement that encompasses education, health and standards of living. The first chart illustrates changes in HDI from 2010 to 2014, and it shows that the HDI level has increased for each country for the time period shown. The second chart splits up HDI measurements by gender and shows gaps in the measure between males and females. The largest gender gap can be seen in India, and the smallest is in Brazil.
+      </p>
+    </div>
 
-  <div id="container"> </div>
-  <div id="caption"><p>Source: United Nations, <a href="http://data.un.org/DocumentData.aspx?id=378">Human Development Index trends, 1990–2014</a>.</p></div>
+    <div id="container"> </div>
+    <div id="caption"><p>Source: United Nations, <a href="http://data.un.org/DocumentData.aspx?id=378">Human Development Index trends, 1990–2014</a>.</p></div>
 
-  <div id="container2"> </div>
-  <div id="secondcaption"><p>Source: United Nations, <a href="http://data.un.org/DocumentData.aspx?id=380">Gender Development Index</a>.</p></div>
+    <div id="container2"> </div>
+    <div id="secondcaption"><p>Source: United Nations, <a href="http://data.un.org/DocumentData.aspx?id=380">Gender Development Index</a>.</p></div>
 
-  <script>
-  Highcharts.chart('container', {
+    <script>
+    Highcharts.chart('container', {
 
-    title: {
-      text: 'Human Development Index Trends in Top Five Most Populous Countries, 2010-2014'
-    },
-
-    subtitle: {
-      text: 'Source: <a href="http://data.un.org/DocumentData.aspx?id=378">UN Human Development Index</a>'
-    },
-
-    yAxis: {
       title: {
-        text: 'Human Development Index (HDI)'
-      }
-    },
-    legend: {
-      layout: 'vertical',
-      align: 'right',
-      verticalAlign: 'middle'
-    },
+        text: 'Human Development Index Trends in Top Five Most Populous Countries, 2010-2014'
+      },
 
-    plotOptions: {
-      series: {
-        label: {
-          connectorAllowed: false
-        },
-        pointStart: 2010
-      }
-    },
+      subtitle: {
+        text: 'Source: <a href="http://data.un.org/DocumentData.aspx?id=378">UN Human Development Index</a>'
+      },
 
-    series: [{
-      name: 'China',
-      data: [0.699, 0.707, 0.718, 0.723, 0.727]
-    }, {
-      name: 'India',
-      data: [0.586, 0.597, 0.600, 0.604, 0.609]
-    }, {
-      name: 'United States',
-      data: [0.909, 0.911, 0.912, 0.913, 0.915]
-    }, {
-      name: 'Indonesia',
-      data: [0.665, 0.671, 0.678, 0.681, 0.684]
-    }, {
-      name: 'Brazil',
-      data: [0.737, 0.742, 0.746, 0.752, 0.755]
-    }],
-
-    responsive: {
-      rules: [{
-        condition: {
-          maxWidth: 500
-        },
-        chartOptions: {
-          legend: {
-            layout: 'horizontal',
-            align: 'center',
-            verticalAlign: 'bottom'
-          }
+      yAxis: {
+        title: {
+          text: 'Human Development Index (HDI)'
         }
-      }]
-    }
-  });
-  </script>
+      },
+      legend: {
+        layout: 'vertical',
+        align: 'right',
+        verticalAlign: 'middle'
+      },
 
-  <script>
-  Highcharts.chart('container2', {
-    chart: {
-      type: 'column'
-    },
-    title: {
-      text: 'Human Development Index by Gender in Top Five Most Populuous Countries, 2014'
-    },
-    subtitle: {
-      text: 'Source: <a href="http://data.un.org/DocumentData.aspx?id=380">UN Gender Development Index</a>'
-    },
-    xAxis: {
-      categories: ['United States', 'Brazil', 'China', 'Indonesia', 'India'],
-      crosshair: true
-    },
-    yAxis: {
-      min: 0,
-      tickInterval: 0.2,
+      plotOptions: {
+        series: {
+          label: {
+            connectorAllowed: false
+          },
+          pointStart: 2010
+        }
+      },
+
+      series: [{
+        name: 'China',
+        data: [0.699, 0.707, 0.718, 0.723, 0.727]
+      }, {
+        name: 'India',
+        data: [0.586, 0.597, 0.600, 0.604, 0.609]
+      }, {
+        name: 'United States',
+        data: [0.909, 0.911, 0.912, 0.913, 0.915]
+      }, {
+        name: 'Indonesia',
+        data: [0.665, 0.671, 0.678, 0.681, 0.684]
+      }, {
+        name: 'Brazil',
+        data: [0.737, 0.742, 0.746, 0.752, 0.755]
+      }],
+
+      responsive: {
+        rules: [{
+          condition: {
+            maxWidth: 500
+          },
+          chartOptions: {
+            legend: {
+              layout: 'horizontal',
+              align: 'center',
+              verticalAlign: 'bottom'
+            }
+          }
+        }]
+      }
+    });
+    </script>
+
+    <script>
+    Highcharts.chart('container2', {
+      chart: {
+        type: 'column'
+      },
       title: {
-        text: 'Human Development Index (HDI)'
-      }
-    },
-    tooltip: {
-      footerFormat: '</table>',
-      shared: true,
-      useHTML: true,
-    },
-    plotOptions: {
-      column: {
-        pointPadding: 0.2,
-        borderWidth: 0
-      }
-    },
-    series: [{
-      name: 'Male',
-      data: [0.916, 0.754, 0.747, 0.706, 0.660]
+        text: 'Human Development Index by Gender in Top Five Most Populuous Countries, 2014'
+      },
+      subtitle: {
+        text: 'Source: <a href="http://data.un.org/DocumentData.aspx?id=380">UN Gender Development Index</a>'
+      },
+      xAxis: {
+        categories: ['United States', 'Brazil', 'China', 'Indonesia', 'India'],
+        crosshair: true
+      },
+      yAxis: {
+        min: 0,
+        tickInterval: 0.2,
+        title: {
+          text: 'Human Development Index (HDI)'
+        }
+      },
+      tooltip: {
+        footerFormat: '</table>',
+        shared: true,
+        useHTML: true,
+      },
+      plotOptions: {
+        column: {
+          pointPadding: 0.2,
+          borderWidth: 0
+        }
+      },
+      series: [{
+        name: 'Male',
+        data: [0.916, 0.754, 0.747, 0.706, 0.660]
 
-    }, {
-      name: 'Female',
-      data: [0.911, 0.752, 0.705, 0.655, 0.525]
+      }, {
+        name: 'Female',
+        data: [0.911, 0.752, 0.705, 0.655, 0.525]
 
-    }]
-  });
-  </script>
-</article>
+      }]
+    });
+    </script>
+  </article>
 </body>
 </html>
